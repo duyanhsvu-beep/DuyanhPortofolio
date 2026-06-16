@@ -145,7 +145,7 @@ export default function ProjectDetailModal({ project, onClose }: ProjectDetailMo
         <div className="border-t border-white/10 bg-[#080808] px-6 py-6 md:px-8">
           <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
             <span className="font-mono text-xs text-[#8c8c8c] tracking-wider">
-              ONTWIKKELD DOOR DUYANH &copy; 2026
+              DUYANH VU &copy; 2026
             </span>
             {project.link && (
               <a

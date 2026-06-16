@@ -15,7 +15,7 @@ export default function App() {
 
   // Dynamic intersection observer to coordinate active nav highlight on scroll
   useEffect(() => {
-    const sections = ["hero", "about", "projects", "contact"];
+    const sections = ["hero", "projects", "about", "contact"];
     const scrollObserver = () => {
       const scrollPosition = window.scrollY + 250; // offset benchmark for natural section trigger
 
@@ -57,11 +57,11 @@ export default function App() {
         {/* Hero Section */}
         <Hero />
 
-        {/* About (Over mij) Section */}
-        <About />
-
         {/* Projects (Mijn projecten) Section */}
         <Projects onSelectProject={(p) => setSelectedProject(p)} />
+
+        {/* About (Over mij) Section */}
+        <About />
 
         {/* Contact (Contact) Section */}
         <Contact />

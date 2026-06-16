@@ -36,8 +36,8 @@ export default function Header({ activeSection }: HeaderProps) {
   };
 
   const navLinks = [
-    { name: 'Over mij', id: 'about' },
     { name: 'Mijn projecten', id: 'projects' },
+    { name: 'Over mij', id: 'about' },
     { name: 'Contact', id: 'contact' }
   ];
 
@@ -55,17 +55,14 @@ export default function Header({ activeSection }: HeaderProps) {
         id="app-header"
       >
         <div className="mx-auto max-w-7xl px-6 md:px-12 flex items-center justify-between">
-          {/* Logo Name */}
+          {/* Logo Name - Duyanh Vu */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex flex-col focus:outline-none text-left"
             id="logo-brand-btn"
           >
-            <span className="font-display text-lg font-bold uppercase tracking-widest text-white transition-colors duration-300 group-hover:text-[#8c8c8c]">
-              DUYANH
-            </span>
-            <span className="font-mono text-[9px] tracking-[0.25em] text-[#8c8c8c] uppercase">
-              Digital Designer
+            <span className="font-sans text-lg font-bold uppercase tracking-[0.15em] text-white transition-all duration-300 group-hover:opacity-80">
+              Duyanh Vu
             </span>
           </button>
 
@@ -77,10 +74,10 @@ export default function Header({ activeSection }: HeaderProps) {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="relative py-2 font-mono text-xs uppercase tracking-widest text-white transition-colors duration-300 hover:text-[#8c8c8c] focus:outline-none cursor-pointer"
+                  className="relative py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:text-white/60 focus:outline-none cursor-pointer"
                   id={`nav-link-${link.id}`}
                 >
-                  <span className={isActive ? 'text-white font-medium' : 'text-[#8c8c8c]'}>
+                  <span className={isActive ? 'text-white font-semibold' : 'text-[#8c8c8c]'}>
                     {link.name}
                   </span>
                   {isActive && (
@@ -93,13 +90,6 @@ export default function Header({ activeSection }: HeaderProps) {
                 </button>
               );
             })}
-
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="rounded-full border border-white px-5 py-2 font-mono text-xs uppercase tracking-widest text-black bg-white transition-all duration-300 hover:bg-transparent hover:text-white"
-            >
-              Start Project
-            </button>
           </nav>
 
           {/* Hamburger Menu Icon */}
@@ -114,9 +104,9 @@ export default function Header({ activeSection }: HeaderProps) {
         </div>
 
         {/* Top Scroll Line Bar */}
-        <div className="absolute bottom-0 left-0 h-[1.5px] bg-white/20 w-full">
+        <div className="absolute bottom-0 left-0 h-[1.5px] bg-white/5 w-full">
           <motion.div
-            className="h-full bg-white origin-left"
+            className="h-full bg-white/40 origin-left"
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
@@ -146,7 +136,7 @@ export default function Header({ activeSection }: HeaderProps) {
                     >
                       <div className="flex items-center space-x-4">
                         <span className={`font-mono text-xs tracking-widest ${isActive ? 'text-white' : 'text-[#8c8c8c]'}`}>
-                          {(link.id === 'about' && '01') || (link.id === 'projects' && '02') || '03'}
+                          {(link.id === 'projects' && '01') || (link.id === 'about' && '02') || '03'}
                         </span>
                         <span className={isActive ? 'underline decoration-1 underline-offset-8' : ''}>
                           {link.name}
@@ -158,12 +148,6 @@ export default function Header({ activeSection }: HeaderProps) {
               </div>
 
               <div className="border-t border-white/10 pt-8 flex flex-col space-y-4">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="rounded-full border border-white text-center py-4 font-mono text-xs uppercase tracking-widest text-black bg-white transition-all duration-300 hover:bg-black hover:text-white"
-                >
-                  NEEM CONTACT OP
-                </button>
                 <div className="flex justify-between items-center text-[10px] font-mono text-[#8c8c8c]">
                   <span>DUYANH &copy; 2026</span>
                   <span>AMSTERDAM, NL</span>

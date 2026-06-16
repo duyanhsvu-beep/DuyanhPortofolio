@@ -1,15 +1,63 @@
 import { Project, ServiceDetail, Experience, SkillGroup } from './types';
+import eenNieuwBeginImg from './assets/images/een_nieuw_begin_1781618889854.jpg';
+import ontkurktImg from './assets/images/ontkurkt_1781618912466.jpg';
+import heroesOnlyImg from './assets/images/heroes_only_1781618934590.jpg';
 
 export const HERO_TEXT = {
   name: "Duyanh",
-  title: "Digital Designer",
-  subtitle: "Samenbrengen van verhalen in licht, frame en code.",
-  tagline: "Specialist in high-end fotografie, videografie en minimalistisch webdesign.",
+  title: "Freelance Videographer & Editor",
+  subtitle: "Samenbrengen van verhalen in licht, frame en montage.",
+  tagline: "Gespecialiseerd in high-end sfeerverslagen, brand films en cinematische montage met een sterke visuele identiteit.",
   location: "Amsterdam, NL",
   coordinates: "52.3676° N, 4.9041° E"
 };
 
 export const PROJECTS: Project[] = [
+  {
+    id: "een-nieuw-begin",
+    title: "Een Nieuw Begin",
+    category: "VIDEOGRAFIE",
+    description: "Een cinematische documentaire die de transitie naar een vernieuwde, pure creatieve studio-omgeving belicht.",
+    fullDescription: "Dit filmwerk documenteert de evolutie van een creatieve workspace. Gefilmd met extreme precisie en een passie voor schaduw en natuurlijk invallend licht, vertelt 'Een Nieuw Begin' het verhaal van de rust en ruimtelijkheid die nodig zijn om authentiek werk te produceren. Het is de ultieme expressie van onze minimalistische filosofie.",
+    year: "2026",
+    services: ["Art Direction", "Cinematography", "Visual Editing"],
+    client: "Duyanh Vu",
+    image: eenNieuwBeginImg,
+    role: "Director of Photography",
+    deliverables: ["4K Cinematic Master", "Social Trailer Campaign", "Visual Stills Gallery"],
+    gallery: [eenNieuwBeginImg],
+    link: "https://duyanh.design/een-nieuw-begin"
+  },
+  {
+    id: "ontkurkt",
+    title: "Ontkurkt",
+    category: "VIDEOGRAFIE",
+    description: "Een intieme, verticale sfeervideo van Wijnfestival Ontkurkt, ontworpen voor mobiele platformen en high-end sfeerverslaggeving.",
+    fullDescription: "Ontkurkt brengt de zintuiglijke ervaring van een exclusief wijnfestival in beeld. Specifiek gecureerd voor een verticaal mobiel frame, legt deze video de nadruk op fijne interacties, ambachtelijke branding op hout en de levendige, warme sfeer van bijeenkomsten. De close-ups en macro-frames creëren een tastbare ervaring.",
+    year: "2025",
+    services: ["Vertical Video", "Dynamic Color Grading", "Macro Cinematography"],
+    client: "Wijnfestival Ontkurkt",
+    image: ontkurktImg,
+    role: "Cinematographer & Colorist",
+    deliverables: ["Vertical 9:16 Social Masters", "Festival Recap Cut", "Color Grading Project"],
+    gallery: [ontkurktImg],
+    link: "https://duyanh.design/ontkurkt"
+  },
+  {
+    id: "heroes-only",
+    title: "Heroes Only",
+    category: "VIDEOGRAFIE",
+    description: "Een asymmetrisch, strak geënsceneerd debatconcept in een rauwe, industriële kantooromgeving.",
+    fullDescription: "Gefilmd voor 'Heroes Only', combineert deze sfeer- en debatproductie hoogvlakte belichting met scherpe personage-focus. De asymmetrische compositie weerspiegelt de meningsverschillen en dynamiek aan tafel, terwijl de minimalistische kleurstelling zorgt dat de fysieke expressie en het narratief volledig de boventoon voeren.",
+    year: "2025",
+    services: ["Multi-Cam Production", "Lighting Design", "Interview Curation"],
+    client: "Heroes Only",
+    image: heroesOnlyImg,
+    role: "Lead Editor & Camera Operator",
+    deliverables: ["Full Interview Episodes", "Teaser Cuts", "B-Roll Portfolio Reel"],
+    gallery: [heroesOnlyImg],
+    link: "https://duyanh.design/heroes-only"
+  },
   {
     id: "amsterdam-nocturne",
     title: "Amsterdam Nocturne",
@@ -27,60 +75,6 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&q=80&w=1200&sat=-100"
     ],
     link: "https://duyanh.design/nocturne"
-  },
-  {
-    id: "silent-flow",
-    title: "Silent Flow",
-    category: "VIDEOGRAFIE",
-    description: "Een poëtische, korte sfeerfilm die de verstilde beweging en sfeer van mist en water bij zonsopgang verkent.",
-    fullDescription: "Silent Flow is een experimentele cinematografische reis die de grens tussen rust en beweging opzoekt. Gecureerd met trage tracking shots en een minimalistisch Sound design, vangt dit project de emotionele impact van landschappen in de vroege ochtend. Het daagt de toeschouwer uit om te vertragen en de subtiele veranderingen in natuurlijke belichting waar te nemen.",
-    year: "2024",
-    services: ["Cinematography", "Color Grading", "Sound Design"],
-    client: "Ethereal Film Festival",
-    image: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&q=80&w=1200&sat=-100",
-    role: "Director of Photography & Editor",
-    deliverables: ["4K Cinematic Cut", "Screener", "Soundtrack LP Vinyl Case Design"],
-    gallery: [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=1200&sat=-100",
-      "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&q=80&w=1200&sat=-100"
-    ],
-    link: "https://vimeo.com/duyanh/silentflow"
-  },
-  {
-    id: "monolith-studios",
-    title: "Monolith Studios",
-    category: "WEBDESIGN",
-    description: "Ontwerp en front-end ontwikkeling van een digitaal exhibition-platform voor een onafhankelijk architecten-collectief.",
-    fullDescription: "Voor Monolith Studios ontwikkelden we een digitale ervaring die de brutalistische, pure filosofie van hun architectuur reflecteert. Het resultaat is een onconventioneel grid-systeem met asymmetrische navigatie, gedurfde typografie en vloeiende paginatransities die aanvoelen als het wandelen door een betonnen museum.",
-    year: "2025",
-    services: ["UI/UX Design", "Creative Coding", "WebGL Interactions"],
-    client: "Monolith Collective",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200&sat=-100",
-    role: "Creative Director & Lead Developer",
-    deliverables: ["Web Application Design System", "React Framework Integratie", "Smooth Scroll Modules"],
-    gallery: [
-      "https://images.unsplash.com/photo-1512403754473-27855f33d4fc?auto=format&fit=crop&q=80&w=1200&sat=-100",
-      "https://images.unsplash.com/photo-1541462608141-27b297b15575?auto=format&fit=crop&q=80&w=1200&sat=-100"
-    ],
-    link: "https://monolith-studios.co"
-  },
-  {
-    id: "tactile-light",
-    title: "Tactile Light",
-    category: "VISUAL ART",
-    description: "Een multidisciplinaire transitie-studie die fysieke materialen vertaalt naar interactieve WebGL-shading patronen.",
-    fullDescription: "Tactile Light verkent de grens tussen het tastbare en het ontastbare. Dit conceptuele project combineert macro-fotografie van ruwe grondstoffen (zoals steen, water en vloeibaar glas) met digitale interacties. Door middel van muisbewegingen en scroll-intensiteit veranderen de texturen dynamisch op het scherm, wat resulteert in een rustgevende, interactieve canvas-ervaring.",
-    year: "2024",
-    services: ["Creative Direction", "3D Shading", "Interactive Prototyping"],
-    client: "Neo-Digital Agency",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1200&sat=-100",
-    role: "Interaction Designer",
-    deliverables: ["Shader Library", "Interactief Concept", "Social Media Campaign Visuals"],
-    gallery: [
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=1200&sat=-100",
-      "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=1200&sat=-100"
-    ],
-    link: "https://lab.duyanh.design/tactile-light"
   }
 ];
 
