@@ -1,7 +1,7 @@
 import { Project, ServiceDetail, Experience, SkillGroup } from './types';
-import eenNieuwBeginImg from './assets/images/een_nieuw_begin_1781618889854.jpg';
-import ontkurktImg from './assets/images/ontkurkt_1781618912466.jpg';
-import heroesOnlyImg from './assets/images/heroes_only_1781618934590.jpg';
+import eenNieuwBeginImg from './assets/images/eennieuwbegin.png';
+import ontkurktImg from './assets/images/ontkurkt.jpg';
+import heroesOnlyImg from './assets/images/heroesonly.png';
 
 export const HERO_TEXT = {
   name: "Duyanh",
