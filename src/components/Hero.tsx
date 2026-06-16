@@ -32,19 +32,8 @@ export default function Hero() {
         {/* Left Side: Large Typographical Text */}
         <motion.div 
           style={{ y: textY, opacity: opacityFade }}
-          className="md:col-span-7 flex flex-col items-start z-10"
+          className="md:col-span-7 flex flex-col items-start z-10 order-2 md:order-1"
         >
-          {/* Tagline Badge */}
-          <div className="flex items-center space-x-2 mb-6">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
-            </span>
-            <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#8c8c8c] font-semibold">
-              BESCHIKBAAR VOOR PROJECTEN
-            </span>
-          </div>
-
           <div className="mb-6">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7.5xl font-extrabold tracking-tight uppercase text-white leading-[1.05] selection:bg-white selection:text-black">
               Freelance <br />
@@ -52,16 +41,11 @@ export default function Hero() {
               <span>& Editor</span>
             </h1>
           </div>
-
-          {/* Description Text */}
-          <p className="font-sans max-w-md text-[#bebebe] text-[15px] sm:text-base font-light leading-relaxed">
-            Specialized in videography, editing and visual storytelling.
-          </p>
         </motion.div>
 
 
         {/* Right Side: Portrait Container */}
-        <div className="md:col-span-5 flex justify-center z-10 animation-delay-300">
+        <div className="md:col-span-5 flex justify-center z-10 order-1 md:order-2 animation-delay-300">
           <motion.div
             style={{ y: imageY }}
             initial={{ opacity: 0, scale: 0.98 }}
@@ -69,12 +53,12 @@ export default function Hero() {
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative overflow-hidden w-full max-w-md aspect-[3/4]"
           >
-            {/* The dramatic portrait of Duyanh - Plain and Pure */}
+            {/* The dramatic portrait of Duyanh - Plain and Pure with horizontal flip */}
             <img
               src={heroImage}
               alt="Duyanh Vu Portrait"
               referrerPolicy="no-referrer"
-              className="h-full w-full object-cover saturate-0 contrast-[1.08] brightness-[0.85]"
+              className="h-full w-full object-cover contrast-[1.02] brightness-[0.95] scale-x-[-1]"
             />
           </motion.div>
         </div>

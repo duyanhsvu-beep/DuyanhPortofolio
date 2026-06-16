@@ -16,9 +16,6 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
         {/* Section Header */}
         <div className="mb-16 md:mb-20 border-b border-white/5 pb-8">
           <div className="flex flex-col">
-            <span className="font-mono text-[9px] tracking-[0.25em] text-[#8c8c8c] uppercase mb-2 font-semibold">
-              GESELECTEERD WERK
-            </span>
             <h2 className="font-display text-3xl font-bold tracking-tight uppercase sm:text-4xl text-white">
               PORTFOLIO
             </h2>
@@ -61,12 +58,12 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
                 className={`group relative overflow-hidden bg-[#0a0a0a] rounded-lg cursor-pointer ${currentLayout.col} ${currentLayout.aspect}`}
                 id={`project-card-${p.id}`}
               >
-                {/* Image - GPU Accelerated subpixel render on hover */}
+                {/* Image - GPU Accelerated subpixel render on hover with natural original colors */}
                 <img
                   src={p.image}
                   alt={p.title}
                   referrerPolicy="no-referrer"
-                  className="absolute inset-0 h-full w-full object-cover saturate-0 brightness-[0.55] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] scale-100 group-hover:scale-[1.035] group-hover:rotate-[0.6deg] group-hover:saturate-[0.35] group-hover:brightness-[0.65]"
+                  className="absolute inset-0 h-full w-full object-cover brightness-[0.85] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] scale-100 group-hover:scale-[1.035] group-hover:rotate-[0.6deg]"
                   style={{
                     transformOrigin: 'center center',
                     backfaceVisibility: 'hidden',
@@ -75,10 +72,13 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
                 />
                 
                 {/* Subtle gradient overlay bottom for absolute legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent pointer-events-none" />
 
                 {/* Understated top subtle shadow overlay */}
                 <div className="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
+
+                {/* Elegant premium white outline hover effect overlay */}
+                <div className="absolute inset-0 border border-white/0 rounded-lg pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:border-white/40 z-20" />
 
                 {/* Typography inside Image - Bottom Left */}
                 <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end z-10 select-none text-left">

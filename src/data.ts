@@ -1,7 +1,7 @@
 import { Project, ServiceDetail, Experience, SkillGroup } from './types';
-import eenNieuwBeginImg from './assets/images/eennieuwbegin.png';
-import ontkurktImg from './assets/images/ontkurkt.jpg';
-import heroesOnlyImg from './assets/images/heroesonly.png';
+import eenNieuwBeginImg from './assets/images/EenNieuwBegin.png';
+import ontkurktImg from './assets/images/Ontkurkt.jpg';
+import heroesOnlyImg from './assets/images/HeroesOnly.png';
 
 export const HERO_TEXT = {
   name: "Duyanh",
@@ -58,24 +58,6 @@ export const PROJECTS: Project[] = [
     gallery: [heroesOnlyImg],
     link: "https://duyanh.design/heroes-only"
   },
-  {
-    id: "amsterdam-nocturne",
-    title: "Amsterdam Nocturne",
-    category: "FOTOGRAFIE",
-    description: "Een diepgaand visueel onderzoek naar het contrast tussen kunstlicht en schaduw in de nachtelijke straten van Amsterdam.",
-    fullDescription: "Dit langlopende project documenteert de nachtelijke rust van de stad. Geïnspireerd door classic film-noir en sfeerbelichting, is de nadruk gelegd op hoog contrast, diepe schaduwen en minimalistische geometrische composities in de stedelijke architectuur. Elk frame vertelt een eigen, stilzwijgend verhaal over eenzaamheid en schoonheid.",
-    year: "2025",
-    services: ["Street Photography", "High-Contrast Editing", "Print Curation"],
-    client: "Persoonlijk Project",
-    image: "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?auto=format&fit=crop&q=80&w=1200&sat=-100",
-    role: "Fotograaf & Visual Editor",
-    deliverables: ["Limited Edition Fotoboek", "Expositie Prints", "Digitale Archieven"],
-    gallery: [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1200&sat=-100",
-      "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&q=80&w=1200&sat=-100"
-    ],
-    link: "https://duyanh.design/nocturne"
-  }
 ];
 
 export const SERVICES: ServiceDetail[] = [
@@ -139,9 +121,10 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const BIOGRAPHY = {
-  text1: "Ik ben Duyanh, een digital designer met een scherp oog voor detail en een onvoorwaardelijke passie voor minimalistische creaties. Ik geloof dat grote ontwerpen krachtig zijn door wat je weglaat, niet door wat je toevoegt.",
-  text2: "Door de werelden van fotografie, videografie en softwareontwikkeling met elkaar te verbinden, creëer ik digitale sferen waarin content en code elkaar versterken. Mijn werk kenmerkt zich door een monochrome esthetiek, gedurfde typografie en verfijnde interacties die rust uitstralen.",
-  text3: "Geïnspireerd door asymmetrische brutalistische lay-outs en de kalmte van de analoge fotografie, streef ik ernaar om de perfecte balans te vinden tussen functionaliteit en esthetische perfectie."
+  text1: "Ik ben een freelance videographer en editor met een passie voor het vertellen van verhalen door beeld. Wat begon met een camera en nieuwsgierigheid groeide uit tot een drang om momenten vast te leggen die mensen raken en bijblijven.",
+  text2: "Reizen speelt daarin een grote rol. Nieuwe plekken, verschillende culturen en onverwachte ontmoetingen inspireren mij voortdurend en beïnvloeden de manier waarop ik naar verhalen kijk. Of ik nu door de bergen van Canada trek, een documentaire maak of een evenement film, ik ben altijd op zoek naar echte momenten en authentieke emoties.",
+  text3: "Naast reizen werk ik graag op evenementen, festivals en live producties. De energie van een evenement, de mensen achter de schermen en de uitdaging om unieke momenten vast te leggen maken ieder project anders. Van concept tot edit focus ik op beelden die niet alleen mooi zijn, maar ook een verhaal vertellen.",
+  text4: "Mijn doel is simpel: video's maken die mensen iets laten voelen."
 };
 
 export const CONTACT_LINKS = {

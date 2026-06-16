@@ -8,17 +8,6 @@ export default function Contact() {
       id="contact"
     >
       <div className="mx-auto max-w-4xl flex flex-col items-center">
-        {/* Subtitle Badge */}
-        <motion.span 
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 0.6, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="font-mono text-[9px] tracking-[0.3em] text-[#8c8c8c] uppercase mb-4 font-semibold"
-        >
-          SAMENWERKEN
-        </motion.span>
-
         {/* Strong Title */}
         <motion.h2 
           initial={{ opacity: 0, y: 15 }}
