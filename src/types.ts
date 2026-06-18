@@ -12,6 +12,8 @@ export interface Project {
   role: string;
   deliverables?: string[];
   link?: string;
+  videoUrl?: string;
+  videoType?: 'youtube' | 'linkedin' | 'local';
 }
 
 export interface SkillGroup {

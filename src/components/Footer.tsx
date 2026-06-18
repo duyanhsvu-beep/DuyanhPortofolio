@@ -12,13 +12,12 @@ export default function Footer() {
         {/* Left item */}
         <div className="flex flex-col text-center sm:text-left">
           <span className="text-white text-[10px] uppercase tracking-wider">DUYANH &copy; 2026</span>
-          <span className="text-[10px] text-[#8c8c8c] mt-0.5">MINIMALIST PORTFOLIO</span>
         </div>
 
         {/* Center item */}
         <div className="text-center">
           <span className="text-[#8c8c8c] text-[10px] tracking-wider">
-            AMSTERDAM, NEDERLAND
+            BREDA, NEDERLAND
           </span>
         </div>
 

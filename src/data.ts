@@ -2,14 +2,16 @@ import { Project, ServiceDetail, Experience, SkillGroup } from './types';
 import eenNieuwBeginImg from './assets/images/EenNieuwBegin.png';
 import ontkurktImg from './assets/images/Ontkurkt.jpg';
 import heroesOnlyImg from './assets/images/HeroesOnly.png';
+// @ts-ignore
+import finalVideo from './assets/images/FINAL.mp4';
 
 export const HERO_TEXT = {
   name: "Duyanh",
   title: "Freelance Videographer & Editor",
   subtitle: "Samenbrengen van verhalen in licht, frame en montage.",
   tagline: "Gespecialiseerd in high-end sfeerverslagen, brand films en cinematische montage met een sterke visuele identiteit.",
-  location: "Amsterdam, NL",
-  coordinates: "52.3676° N, 4.9041° E"
+  location: "Breda, NL",
+  coordinates: "51.5719° N, 4.7683° E"
 };
 
 export const PROJECTS: Project[] = [
@@ -26,7 +28,9 @@ export const PROJECTS: Project[] = [
     role: "Director of Photography",
     deliverables: ["4K Cinematic Master", "Social Trailer Campaign", "Visual Stills Gallery"],
     gallery: [eenNieuwBeginImg],
-    link: "https://duyanh.design/een-nieuw-begin"
+    link: "https://duyanh.design/een-nieuw-begin",
+    videoUrl: "https://www.youtube.com/embed/Dnc5SRf_lG4?si=2Z0lxz1nux6Z78VZ",
+    videoType: "youtube"
   },
   {
     id: "ontkurkt",
@@ -41,7 +45,9 @@ export const PROJECTS: Project[] = [
     role: "Cinematographer & Colorist",
     deliverables: ["Vertical 9:16 Social Masters", "Festival Recap Cut", "Color Grading Project"],
     gallery: [ontkurktImg],
-    link: "https://duyanh.design/ontkurkt"
+    link: "https://duyanh.design/ontkurkt",
+    videoUrl: finalVideo,
+    videoType: "local"
   },
   {
     id: "heroes-only",
@@ -56,7 +62,9 @@ export const PROJECTS: Project[] = [
     role: "Lead Editor & Camera Operator",
     deliverables: ["Full Interview Episodes", "Teaser Cuts", "B-Roll Portfolio Reel"],
     gallery: [heroesOnlyImg],
-    link: "https://duyanh.design/heroes-only"
+    link: "https://duyanh.design/heroes-only",
+    videoUrl: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7209485825414213632?collapsed=1",
+    videoType: "linkedin"
   },
 ];
 

@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'motion/react';
 
 interface HeaderProps {
   activeSection: string;
+  onNavigate?: (id: string) => void;
 }
 
-export default function Header({ activeSection }: HeaderProps) {
+export default function Header({ activeSection, onNavigate }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,9 +30,13 @@ export default function Header({ activeSection }: HeaderProps) {
 
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (onNavigate) {
+      onNavigate(id);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -57,7 +62,13 @@ export default function Header({ activeSection }: HeaderProps) {
         <div className="mx-auto max-w-7xl px-6 md:px-12 flex items-center justify-between">
           {/* Logo Name - Duyanh Vu */}
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => {
+              if (onNavigate) {
+                onNavigate('hero');
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
             className="group flex flex-col focus:outline-none text-left"
             id="logo-brand-btn"
           >

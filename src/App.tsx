@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ProjectDetailModal from './components/ProjectDetailModal';
+import VideoLightbox from './components/VideoLightbox';
 import { Project } from './types';
 
 export default function App() {
@@ -39,6 +39,27 @@ export default function App() {
     return () => window.removeEventListener('scroll', scrollObserver);
   }, []);
 
+  const handleSelectProject = (project: Project) => {
+    if (project.id === 'een-nieuw-begin') {
+      window.open('https://www.youtube.com/watch?v=Dnc5SRf_lG4', '_blank', 'noopener,noreferrer');
+    } else if (project.id === 'heroes-only') {
+      window.open('https://www.linkedin.com/feed/update/urn:li:ugcPost:7209485825414213632/', '_blank', 'noopener,noreferrer');
+    } else if (project.id === 'ontkurkt') {
+      setSelectedProject(project);
+    }
+  };
+
+  const handleHeaderNavigate = (id: string) => {
+    if (id === 'hero') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div className="relative min-h-screen w-full bg-black text-white font-sans overflow-x-hidden selection:bg-white selection:text-black">
       {/* Absolute high-end paper grain ambient overlay */}
@@ -50,7 +71,7 @@ export default function App() {
       />
 
       {/* Transparent Sticky Navigation Header */}
-      <Header activeSection={activeSection} />
+      <Header activeSection={activeSection} onNavigate={handleHeaderNavigate} />
 
       {/* Full-Screen Main Pages */}
       <main className="relative flex flex-col w-full">
@@ -58,7 +79,7 @@ export default function App() {
         <Hero />
 
         {/* Projects (Mijn projecten) Section */}
-        <Projects onSelectProject={(p) => setSelectedProject(p)} />
+        <Projects onSelectProject={handleSelectProject} />
 
         {/* About (Over mij) Section */}
         <About />
@@ -70,11 +91,12 @@ export default function App() {
       {/* Footer Baseline metadata panel */}
       <Footer />
 
-      {/* Floating immersive project case-studies overlay modal */}
+      {/* Lightbox video modal for Ontkurkt */}
       <AnimatePresence>
-        {selectedProject && (
-          <ProjectDetailModal
-            project={selectedProject}
+        {selectedProject && selectedProject.videoUrl && (
+          <VideoLightbox
+            videoUrl={selectedProject.videoUrl}
+            posterUrl={selectedProject.image}
             onClose={() => setSelectedProject(null)}
           />
         )}

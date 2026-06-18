@@ -44,16 +44,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row gap-8 text-[11px] font-mono text-[#8c8c8c]">
-              <div>
-                <span className="text-white block mb-1.5 font-semibold tracking-wider uppercase">LOCATIE</span>
-                <span>Amsterdam, Nederland</span>
-              </div>
-              <div>
-                <span className="text-white block mb-1.5 font-semibold tracking-wider uppercase">DISCIPLINES</span>
-                <span>Cinematic Videography &bull; Creative Editing</span>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>

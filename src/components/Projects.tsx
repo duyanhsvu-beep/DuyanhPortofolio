@@ -25,7 +25,7 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
         {/* Projects Exhibition Grid - Editorial Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
           {PROJECTS.map((p, index) => {
-            // Explicitly map each project to a hand-curated size and aspect ratio for premium editorial rhythm
+            // Hand-curated size and aspect ratio for premium editorial rhythm
             const getLayout = (id: string) => {
               switch (id) {
                 case "een-nieuw-begin":
@@ -37,9 +37,6 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
                 case "heroes-only":
                   // Sleek horizontal medium-width presentation
                   return { col: "md:col-span-7", aspect: "aspect-[4/3] md:aspect-[16/10]" };
-                case "amsterdam-nocturne":
-                  // Supporting square/artistic presentation
-                  return { col: "md:col-span-5", aspect: "aspect-[1/1] md:aspect-[4/3]" };
                 default:
                   return { col: "md:col-span-6", aspect: "aspect-[16/10]" };
               }
