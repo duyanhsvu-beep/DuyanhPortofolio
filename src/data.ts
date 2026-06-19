@@ -45,9 +45,9 @@ export const PROJECTS: Project[] = [
     role: "Cinematographer & Colorist",
     deliverables: ["Vertical 9:16 Social Masters", "Festival Recap Cut", "Color Grading Project"],
     gallery: [ontkurktImg],
-    link: "https://duyanh.design/ontkurkt",
-    videoUrl: finalVideo,
-    videoType: "local"
+    link: "https://vimeo.com/1202827668/ed5974b8a6?share=copy&fl=sv&fe=ci",
+    videoUrl: "https://vimeo.com/1202827668/ed5974b8a6?share=copy&fl=sv&fe=ci",
+    videoType: "vimeo"
   },
   {
     id: "heroes-only",
@@ -132,13 +132,11 @@ export const BIOGRAPHY = {
   text1: "Ik ben een freelance videographer en editor met een passie voor het vertellen van verhalen door beeld. Wat begon met een camera en nieuwsgierigheid groeide uit tot een drang om momenten vast te leggen die mensen raken en bijblijven.",
   text2: "Reizen speelt daarin een grote rol. Nieuwe plekken, verschillende culturen en onverwachte ontmoetingen inspireren mij voortdurend en beïnvloeden de manier waarop ik naar verhalen kijk. Of ik nu door de bergen van Canada trek, een documentaire maak of een evenement film, ik ben altijd op zoek naar echte momenten en authentieke emoties.",
   text3: "Naast reizen werk ik graag op evenementen, festivals en live producties. De energie van een evenement, de mensen achter de schermen en de uitdaging om unieke momenten vast te leggen maken ieder project anders. Van concept tot edit focus ik op beelden die niet alleen mooi zijn, maar ook een verhaal vertellen.",
-  text4: "Mijn doel is simpel: video's maken die mensen iets laten voelen."
 };
 
 export const CONTACT_LINKS = {
-  email: "duyanhsvu@gmail.com",
-  instagram: "https://instagram.com/duyanh",
-  linkedin: "https://linkedin.com/in/duyanh",
-  behance: "https://behance.net/duyanh",
-  github: "https://github.com/duyanh"
+  email: "duyanhvu@hotmail.nl",
+  instagram: "https://www.instagram.com/vusuals_/$0",
+  linkedin: "www.linkedin.com/in/duyanhvuu",
+
 };

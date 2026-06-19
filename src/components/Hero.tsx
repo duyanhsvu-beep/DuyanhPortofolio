@@ -58,7 +58,7 @@ export default function Hero() {
               src={heroImage}
               alt="Duyanh Vu Portrait"
               referrerPolicy="no-referrer"
-              className="h-full w-full object-cover contrast-[1.02] brightness-[0.95] scale-x-[-1]"
+              className="h-full w-full object-cover contrast-125 brightness-95 -scale-x-100"
             />
           </motion.div>
         </div>

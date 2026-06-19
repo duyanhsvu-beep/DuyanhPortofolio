@@ -45,7 +45,7 @@ export default function App() {
     } else if (project.id === 'heroes-only') {
       window.open('https://www.linkedin.com/feed/update/urn:li:ugcPost:7209485825414213632/', '_blank', 'noopener,noreferrer');
     } else if (project.id === 'ontkurkt') {
-      setSelectedProject(project);
+      window.open('https://vimeo.com/1202827668/ed5974b8a6?share=copy&fl=sv&fe=ci', '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -97,6 +97,7 @@ export default function App() {
           <VideoLightbox
             videoUrl={selectedProject.videoUrl}
             posterUrl={selectedProject.image}
+            videoType={selectedProject.videoType}
             onClose={() => setSelectedProject(null)}
           />
         )}

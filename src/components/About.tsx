@@ -39,9 +39,6 @@ export default function About() {
               <p>
                 {BIOGRAPHY.text3}
               </p>
-              <p>
-                {BIOGRAPHY.text4}
-              </p>
             </div>
             
           

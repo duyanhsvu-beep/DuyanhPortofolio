@@ -13,7 +13,7 @@ export interface Project {
   deliverables?: string[];
   link?: string;
   videoUrl?: string;
-  videoType?: 'youtube' | 'linkedin' | 'local';
+  videoType?: 'youtube' | 'linkedin' | 'local' | 'vimeo';
 }
 
 export interface SkillGroup {

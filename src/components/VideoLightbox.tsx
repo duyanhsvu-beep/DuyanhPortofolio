@@ -5,10 +5,11 @@ import { X } from 'lucide-react';
 interface VideoLightboxProps {
   videoUrl: string;
   posterUrl?: string;
+  videoType?: string;
   onClose: () => void;
 }
 
-export default function VideoLightbox({ videoUrl, posterUrl, onClose }: VideoLightboxProps) {
+export default function VideoLightbox({ videoUrl, posterUrl, videoType, onClose }: VideoLightboxProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
 
   // Close on ESC key press
@@ -64,20 +65,35 @@ export default function VideoLightbox({ videoUrl, posterUrl, onClose }: VideoLig
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
         transition={{ type: 'spring', damping: 25, stiffness: 200, delay: 0.05 }}
-        className="relative w-full max-w-5xl aspect-video rounded-lg overflow-hidden bg-black shadow-2xl border border-white/5"
+        className={`relative rounded-lg overflow-hidden bg-black shadow-2xl border border-white/5 ${
+          videoType === 'vimeo'
+            ? 'w-full max-w-[380px] sm:max-w-[420px] aspect-[9/16] max-h-[85vh]'
+            : 'w-full max-w-5xl aspect-video'
+        }`}
       >
-        <video
-          src={videoUrl}
-          poster={posterUrl}
-          controls
-          autoPlay
-          preload="metadata"
-          playsInline
-          className="h-full w-full object-contain bg-black"
-          id="lightbox-native-player"
-        >
-          Uw browser ondersteunt geen video-afspelen.
-        </video>
+        {videoType === 'vimeo' ? (
+          <iframe
+            src={videoUrl}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="absolute inset-0 h-full w-full border-0 bg-black"
+            title="Design/Videografie Showcase"
+            allowFullScreen
+          />
+        ) : (
+          <video
+            src={videoUrl}
+            poster={posterUrl}
+            controls
+            autoPlay
+            preload="metadata"
+            playsInline
+            className="h-full w-full object-contain bg-black"
+            id="lightbox-native-player"
+          >
+            Uw browser ondersteunt geen video-afspelen.
+          </video>
+        )}
       </motion.div>
     </motion.div>
   );

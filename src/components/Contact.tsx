@@ -27,7 +27,7 @@ export default function Contact() {
           transition={{ duration: 1, delay: 0.2 }}
           className="font-sans text-sm sm:text-base text-[#bebebe] font-light leading-relaxed max-w-md mt-6"
         >
-          Heb je een project, een idee of wil je de mogelijkheden bespreken? Neem gerust direct contact met mij op.
+          Heb je een project, een idee of wil je de mogelijkheden bespreken? Neem contact met mij op.
         </motion.p>
 
         {/* Gorgeous Minimalist Monochrome Action Button */}
@@ -82,23 +82,6 @@ export default function Contact() {
               LINKEDIN
             </a>
             <span className="text-neutral-800 font-sans">&bull;</span>
-            <a 
-              href={CONTACT_LINKS.behance} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-white transition-colors duration-300"
-            >
-              BEHANCE
-            </a>
-            <span className="text-neutral-800 font-sans">&bull;</span>
-            <a 
-              href={CONTACT_LINKS.github} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-white transition-colors duration-300"
-            >
-              GITHUB
-            </a>
           </div>
         </motion.div>
       </div>
